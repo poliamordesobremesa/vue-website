@@ -28,6 +28,7 @@
 		"cross-fetch": "^4.0.0",
 		"node-fetch": "^3.3.2",
 		"pinia": "2.0.14",
+		"primevue": "^3.46.0",
 		"prismjs": "1.28.0",
 		"unplugin-vue-markdown": "^0.25.2",
 		"vike": "^0.4.156",

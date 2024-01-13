@@ -3,6 +3,7 @@ import { setPageContext } from './usePageContext';
 import type { PageContext } from 'vike/types';
 import type { Component } from './types';
 import PageShell from './PageShell.vue';
+import PrimeVue from 'primevue/config';
 
 export { createApp };
 
@@ -31,6 +32,7 @@ function createApp(pageContext: PageContext) {
 	});
 
 	const app = createSSRApp(PageWithWrapper);
+	app.use(PrimeVue);
 
 	// We use `app.changePage()` to do Client Routing, see `+onRenderClient.ts`
 	objectAssign(app, {

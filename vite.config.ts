@@ -7,8 +7,7 @@ import * as path from 'path';
 const config: UserConfig = {
 	resolve: {
 		alias: {
-			'@renderer': path.resolve(__dirname, './renderer'),
-			'@components': path.resolve(__dirname, './components'),
+			'#': path.resolve(__dirname, '.'),
 		},
 	},
 	plugins: [

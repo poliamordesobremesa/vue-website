@@ -8,9 +8,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useData } from '@renderer/useData';
+import { useData } from '#/renderer/useData';
 import type { Data } from './+data';
 
 const data = useData<Data>();
-
 </script>

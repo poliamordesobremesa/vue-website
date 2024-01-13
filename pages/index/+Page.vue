@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import Counter from '@components/Counter.vue';
+import Counter from '#/components/Counter.vue';
 import { navigate } from 'vike/client/router';
 
 const randomNavigation = () => {
