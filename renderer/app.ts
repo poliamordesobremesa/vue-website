@@ -1,9 +1,11 @@
 import { createSSRApp, defineComponent, h, markRaw, reactive } from 'vue';
-import { setPageContext } from './usePageContext';
 import type { PageContext } from 'vike/types';
-import type { Component } from './types';
 import PageShell from './PageShell.vue';
-import PrimeVue from 'primevue/config';
+import { createPinia } from 'pinia';
+
+import { setPageContext } from './usePageContext';
+import { registerPrimeVue } from './primeVue';
+import type { Component } from './types';
 
 export { createApp };
 
@@ -32,7 +34,11 @@ function createApp(pageContext: PageContext) {
 	});
 
 	const app = createSSRApp(PageWithWrapper);
-	app.use(PrimeVue);
+
+	const store = createPinia();
+	app.use(store);
+
+	registerPrimeVue(app);
 
 	// We use `app.changePage()` to do Client Routing, see `+onRenderClient.ts`
 	objectAssign(app, {

@@ -10,11 +10,9 @@
 		"esModuleInterop": true,
 		"baseUrl": ".",
 		"paths": {
-			"#/components/*": ["./components/*"],
-			"#/pages/*": ["./pages/*"],
-			"#/model/*": ["./model/*"],
-			"#/renderer/*": ["./renderer/*"],
-			"#/assets/*": ["./assets/"]
+			"#/*": ["./*"],
+			"#/page/*": ["./pages/*/index.ts"],
+			"#/component/*": ["./components/*/index.ts"]
 		}
 	},
 	"ts-node": {

@@ -18,6 +18,7 @@ module.exports = {
 	],
 	rules: {
 		'vue/multi-word-component-names': 'off',
+		'vue/no-reserved-component-names': 'off',
 		'@typescript-eslint/no-namespace': 'off',
 		'@typescript-eslint/no-this-alias': 'off',
 		'@typescript-eslint/no-explicit-any': 'off',

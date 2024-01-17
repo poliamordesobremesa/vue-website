@@ -1,5 +1,12 @@
 <template>
-	<div class="layout">
+	<div class="container">
+		<div class="container position-sticky z-index-sticky top-0">
+			<div class="row">
+				<div class="col-12">
+					<NavbarDefault :sticky="true" />
+				</div>
+			</div>
+		</div>
 		<div class="navigation">
 			<a href="/" class="logo">
 				<img src="./logo.svg" height="64" width="64" />
@@ -16,7 +23,8 @@
 </template>
 
 <script lang="ts" setup>
-import Link from './Link.vue';
+import NavbarDefault from '#/components/NavbarDefault.vue';
+import Link from '#/components/Link.vue';
 </script>
 
 <style>
